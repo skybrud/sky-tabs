@@ -1,0 +1,21 @@
+<div 
+	class="sky-tabs">
+
+	<div 
+		class="sky-tabs-tabs">
+		
+		<button
+			v-for="tab in tabs"
+			v-on:click="setTab(tab._uid)"
+			v-bind:class="{active: activeTab === tab._uid}">
+
+			<span>{{ tab.title }}</span>
+		</button>
+	</div>
+	
+	<div 
+		class="sky-tabs-container">
+
+		<slot></slot>
+	</div>
+</div>

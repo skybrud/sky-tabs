@@ -1,0 +1,6 @@
+<div
+	v-show="this._uid === this.$parent.activeTab"
+	v-bind:class="['sky-tab-content', {active: this.$parent.activeTab === this._uid}]">
+
+	<slot></slot>
+</div>
